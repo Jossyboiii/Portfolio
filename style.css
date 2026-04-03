@@ -4,7 +4,7 @@
 /* ── Base ────────────────────────────────────────────────── */
 html {
   height: 100%;
-  background: url('assets/portfolio-bg.gif') no-repeat center center fixed;
+  background: url('assets/portfolio-bg.mp4') no-repeat center center fixed;
   background-size: cover;
   background-color: #000;
 }
