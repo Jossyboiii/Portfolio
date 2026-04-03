@@ -299,42 +299,45 @@ main {
 .kv-val a:hover { color: #FFEE00; }
 
 /* ── Timeline ────────────────────────────────────────────── */
-.timeline { position: relative; }
+
+/*
+  Layout: [20px dot col] [80px year col] [1fr content col]
+  The line runs down the centre of the dot column (left: 9px).
+  Dots sit on top via z-index. Year and content are fully clear
+  of the line — no overlap ever.
+*/
+
+.timeline {
+  position: relative;
+  padding-left: 0;
+}
+
+/* Single unbroken vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 9px; /* centre of 20px dot column */
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background: #2a2a2a;
+  z-index: 0;
+}
 
 .tl-item {
   display: grid;
-  grid-template-columns: 90px 1fr;
+  grid-template-columns: 20px 80px 1fr;
   position: relative;
   padding-bottom: 1.8rem;
 }
 
 .tl-item:last-child { padding-bottom: 0; }
 
-.tl-left {
+/* dot column — just holds the dot, centred on the line */
+.tl-dot-col {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-right: 20px;
-  position: relative;
-}
-
-/* vertical line: runs from top of item downward, stops at bottom of last item */
-.tl-item:not(:last-child) .tl-left::after {
-  content: '';
-  position: absolute;
-  top: 20px;
-  right: 10px;
-  width: 1px;
-  height: calc(100% + 1.8rem - 20px);
-  background: #2a2a2a;
-}
-
-.tl-year {
-  font-size: 11px;
-  color: #555;
-  letter-spacing: 0.04em;
-  margin-top: 3px;
-  white-space: nowrap;
+  justify-content: center;
+  padding-top: 4px;
 }
 
 .tl-dot {
@@ -343,7 +346,6 @@ main {
   border: 1px solid #444;
   background: #111;
   border-radius: 50%;
-  margin-top: 8px;
   flex-shrink: 0;
   position: relative;
   z-index: 1;
@@ -352,6 +354,16 @@ main {
 .tl-dot-accent {
   border-color: #FFEE00;
   background: #FFEE00;
+}
+
+/* year column */
+.tl-year {
+  font-size: 11px;
+  color: #555;
+  letter-spacing: 0.04em;
+  padding-top: 3px;
+  padding-left: 6px;
+  white-space: nowrap;
 }
 
 .tl-body {
@@ -545,7 +557,7 @@ footer {
   #hamburger { display: flex; }
   #topnav { padding: 0 1.5rem; gap: 1rem; }
   main { padding: 68px 1.5rem 3rem; }
-  .tl-item { grid-template-columns: 72px 1fr; }
+  .tl-item { grid-template-columns: 20px 60px 1fr; }
   .kv-row { grid-template-columns: 80px 1fr; }
   #social-grid { grid-template-columns: 1fr 1fr; }
   footer { flex-direction: column; gap: 4px; }
