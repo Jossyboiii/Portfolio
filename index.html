@@ -6,288 +6,252 @@
 \____/\____/____/____/\__, /_.___/\____/_/_/_/
                      /____/
 -->
-
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>José de Barros</title>
-  <link rel="icon" href="assets/favicon.ico">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>José de Barros</title>
+<link href="assets/favicon.ico" rel="icon"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
+<video autoplay="" id="bg-video" loop="" muted="" playsinline="">
+<source src="assets/portfolio-bg.mp4" type="video/mp4"/>
+</video>
+<nav id="topnav">
+<span id="nav-logo">JdB<span class="accent">.</span></span>
+<ul id="nav-tabs">
+<li><button class="tab-btn active" data-section="home">home</button></li>
+<li><button class="tab-btn" data-section="about">about</button></li>
+<li><button class="tab-btn" data-section="projects">projects</button></li>
+<li><button class="tab-btn" data-section="contact">contact</button></li>
+</ul>
+<div id="nav-socials">
+<a aria-label="YouTube" href="https://www.youtube.com/@jossyboiii" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5V8.5l6.25 3.5-6.25 3.5z"></path></svg>
+</a>
+<a aria-label="Instagram" href="https://www.instagram.com/jossyboii/" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"></path></svg>
+</a>
+<a aria-label="TikTok" href="https://www.tiktok.com/@jossyboiii" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"></path></svg>
+</a>
+<a aria-label="Spotify" href="https://open.spotify.com/user/bloodshell06?si=485696e425ba4a00" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"></path></svg>
+</a>
+</div>
+<button aria-label="Menu" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div id="mobile-menu">
+<button class="mob-btn active" data-section="home">home</button>
+<button class="mob-btn" data-section="about">about</button>
+<button class="mob-btn" data-section="projects">projects</button>
+<button class="mob-btn" data-section="contact">contact</button>
+</div>
+<main>
+<!-- HOME -->
+<section class="section active" id="home">
+<h1 id="hero-name">Hi, I'm<br/>Jay<span class="accent">_</span></h1>
+<p class="hero-sub">// born in England. raised in France. figuring stuff out.</p>
+<div id="social-grid">
+<a class="social-card" href="https://www.youtube.com/@jossyboiii" target="_blank">
+<svg class="sc-svg" fill="currentColor" viewbox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5V8.5l6.25 3.5-6.25 3.5z"></path></svg>
+<span class="sc-label">YouTube<span class="sc-handle">@jossyboiii</span></span>
+</a>
+<a class="social-card" href="https://www.instagram.com/jossyboii/" target="_blank">
+<svg class="sc-svg" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"></path></svg>
+<span class="sc-label">Instagram<span class="sc-handle">@jossyboii</span></span>
+</a>
+<a class="social-card" href="https://www.tiktok.com/@jossyboiii" target="_blank">
+<svg class="sc-svg" fill="currentColor" viewbox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"></path></svg>
+<span class="sc-label">TikTok<span class="sc-handle">@jossyboiii</span></span>
+</a>
+<a class="social-card" href="https://open.spotify.com/user/bloodshell06?si=485696e425ba4a00" target="_blank">
+<svg class="sc-svg" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"></path></svg>
+<span class="sc-label">Spotify<span class="sc-handle">bloodshell06</span></span>
+</a>
+</div>
+</section>
+<!-- ABOUT -->
+<section class="section" id="about">
+<p class="section-label">// bio</p>
+<div class="about-block">
+<p class="about-lead">Bilingual. Technically literate. Business minded.</p>
+<p class="about-body">British-Turkish, raised in the south of France. I move between languages, cultures, and disciplines without sitting still in any of them.<br/><br/>Retired degenerate. Into bodybuilding, FPS games, and anything with a good bassline. I think about money and business more than is probably normal — and I'm trying to build something out of all of it.</p>
+</div>
+<div class="kv-block">
+<div class="kv-row"><span class="kv-key">languages</span><span class="kv-val">English · French · Spanish (beginner)</span></div>
+</div>
+<p class="section-label" style="margin-top:3rem">// experience</p>
+<div class="timeline">
+<div class="tl-item">
+<div class="tl-dot-col"><span class="tl-dot tl-dot-accent"></span></div>
+<span class="tl-year">2025</span>
+<div class="tl-body">
+<span class="tl-title">Les Délices de Lectoure</span>
+<span class="tl-role">Acting Assistant Manager · Feb–Dec 2025</span>
 
-  <video id="bg-video" autoplay loop muted playsinline>
-    <source src="assets/portfolio-bg.mp4" type="video/mp4">
-  </video>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-dot-col"><span class="tl-dot"></span></div>
+<span class="tl-year">2024</span>
+<div class="tl-body">
+<span class="tl-title">Le Bastion</span>
+<span class="tl-role">Server / Bartender · Mar–Jun 2024</span>
 
-  <nav id="topnav">
-    <span id="nav-logo">JdB<span class="accent">.</span></span>
-    <ul id="nav-tabs">
-      <li><button class="tab-btn active" data-section="home">home</button></li>
-      <li><button class="tab-btn" data-section="about">about</button></li>
-      <li><button class="tab-btn" data-section="projects">projects</button></li>
-      <li><button class="tab-btn" data-section="contact">contact</button></li>
-    </ul>
-    <div id="nav-socials">
-      <a href="https://www.youtube.com/@jossyboiii" target="_blank" aria-label="YouTube">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5V8.5l6.25 3.5-6.25 3.5z"/></svg>
-      </a>
-      <a href="https://www.instagram.com/jossyboii/" target="_blank" aria-label="Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-      </a>
-      <a href="https://www.tiktok.com/@jossyboiii" target="_blank" aria-label="TikTok">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
-      </a>
-      <a href="https://open.spotify.com/user/bloodshell06?si=485696e425ba4a00" target="_blank" aria-label="Spotify">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-      </a>
-    </div>
-    <button id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-  </nav>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-dot-col"><span class="tl-dot"></span></div>
+<span class="tl-year">2021–23</span>
+<div class="tl-body">
+<span class="tl-title">La Maison Escat</span>
+<span class="tl-role">General Worker · Assistant Caterer · 2021–2023</span>
 
-  <div id="mobile-menu">
-    <button class="mob-btn active" data-section="home">home</button>
-    <button class="mob-btn" data-section="about">about</button>
-    <button class="mob-btn" data-section="projects">projects</button>
-    <button class="mob-btn" data-section="contact">contact</button>
-  </div>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-dot-col"><span class="tl-dot"></span></div>
+<span class="tl-year">2022–23</span>
+<div class="tl-body">
+<span class="tl-title">Flora Mazeres Fleurs</span>
+<span class="tl-role">Agricultural Worker · 2022–2023</span>
 
-  <main>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-dot-col"><span class="tl-dot"></span></div>
+<span class="tl-year">2022 →</span>
+<div class="tl-body">
+<span class="tl-title">Entrepreneurial &amp; Digital Work</span>
+<span class="tl-role">Independent · 2022–present</span>
 
-    <!-- HOME -->
-    <section id="home" class="section active">
-      <h1 id="hero-name">Hi, I'm<br>Jay<span class="accent">_</span></h1>
-      <p class="hero-sub">// born in England. raised in France. figuring it out.</p>
+</div>
+</div>
+</div>
+<p class="section-label" style="margin-top:3rem">// education &amp; certifications</p>
+<div class="timeline">
+<div class="tl-item">
+<div class="tl-dot-col"><span class="tl-dot"></span></div>
+<span class="tl-year">2026</span>
+<div class="tl-body">
+<span class="tl-title">AI Fluency: Framework &amp; Foundations</span>
+<span class="tl-role">Anthropic</span>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-dot-col"><span class="tl-dot"></span></div>
+<span class="tl-year">2026</span>
+<div class="tl-body">
+<span class="tl-title">Claude 101</span>
+<span class="tl-role">Anthropic</span>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-dot-col"><span class="tl-dot"></span></div>
+<span class="tl-year">2024–25</span>
+<div class="tl-body">
+<span class="tl-title">BSc Computer Science</span>
+<span class="tl-role">UT3 Paul Sabatier, Toulouse — dropped out</span>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-dot-col"><span class="tl-dot"></span></div>
+<span class="tl-year">2024</span>
+<div class="tl-body">
+<span class="tl-title">Baccalauréat Général</span>
+<span class="tl-role">Lycée Polyvalent Maréchal Lannes</span>
 
-      <div id="social-grid">
-        <a class="social-card" href="https://www.youtube.com/@jossyboiii" target="_blank">
-          <svg class="sc-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5V8.5l6.25 3.5-6.25 3.5z"/></svg>
-          <span class="sc-label">YouTube<span class="sc-handle">@jossyboiii</span></span>
-        </a>
-        <a class="social-card" href="https://www.instagram.com/jossyboii/" target="_blank">
-          <svg class="sc-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-          <span class="sc-label">Instagram<span class="sc-handle">@jossyboii</span></span>
-        </a>
-        <a class="social-card" href="https://www.tiktok.com/@jossyboiii" target="_blank">
-          <svg class="sc-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
-          <span class="sc-label">TikTok<span class="sc-handle">@jossyboiii</span></span>
-        </a>
-        <a class="social-card" href="https://open.spotify.com/user/bloodshell06?si=485696e425ba4a00" target="_blank">
-          <svg class="sc-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-          <span class="sc-label">Spotify<span class="sc-handle">bloodshell06</span></span>
-        </a>
-      </div>
-
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <p class="section-label">// bio</p>
-
-      <div class="about-block">
-        <p class="about-lead">Bilingual (EN/FR). Technically literate. Commercially minded.</p>
-        <p class="about-body">I'm José — British-Turkish, born in England, grew up in France. Started out in Computer Science before realising business and finance were where my head actually was. I'm drawn to how industries work, how money moves, and how technology cuts across both. Outside of that: martial arts, travel, and building things on the side.</p>
-      </div>
-
-      <div class="kv-block">
-        <div class="kv-row"><span class="kv-key">languages</span><span class="kv-val">English · French · Spanish (beginner)</span></div>
-      </div>
-
-      <p class="section-label" style="margin-top:3rem">// experience</p>
-
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-dot-col"><span class="tl-dot tl-dot-accent"></span></div>
-          <span class="tl-year">2025</span>
-          <div class="tl-body">
-            <span class="tl-title">Les Délices de Lectoure</span>
-            <span class="tl-role">Acting Assistant Manager · Feb–Dec 2025</span>
-            <ul>
-              <li>Ran daily floor operations — front-of-house service, order taking, payment, and customer retention</li>
-              <li>Operational point of reference for the owner — restructured internal processes and onboarded new staff</li>
-              <li>Product display strategy to maximise sales and reduce waste</li>
-              <li>Involved in menu development and product sourcing alongside management</li>
-              <li>Optimised the till and stock management system</li>
-              <li>Self-taught barista skills — cappuccino, latte art</li>
-            </ul>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot-col"><span class="tl-dot"></span></div>
-          <span class="tl-year">2024</span>
-          <div class="tl-body">
-            <span class="tl-title">Le Bastion</span>
-            <span class="tl-role">Server / Bartender · Mar–Jun 2024</span>
-            <p class="tl-summary">High-volume indoor and outdoor service. Lead contact for large anglophone events — weddings up to 150 covers, acting as sole interpreter and coordinator. Full bar workflow — spirits, wines, draught beer, closing duties.</p>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot-col"><span class="tl-dot"></span></div>
-          <span class="tl-year">2021–23</span>
-          <div class="tl-body">
-            <span class="tl-title">La Maison Escat</span>
-            <span class="tl-role">General Worker · Assistant Caterer · 2021–2023</span>
-            <p class="tl-summary">Assisted a private chef serving high-end clientele (manor and château owners). Culinary prep, logistics coordination, and on-site delivery.</p>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot-col"><span class="tl-dot"></span></div>
-          <span class="tl-year">2022–23</span>
-          <div class="tl-body">
-            <span class="tl-title">Flora Mazeres Fleurs</span>
-            <span class="tl-role">Agricultural Worker · 2022–2023</span>
-            <p class="tl-summary">Seasonal harvest work. Operated machinery including tractors for potato harvesting. Physical, team and solo work.</p>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot-col"><span class="tl-dot"></span></div>
-          <span class="tl-year">2022 →</span>
-          <div class="tl-body">
-            <span class="tl-title">Entrepreneurial &amp; Digital Work</span>
-            <span class="tl-role">Independent · 2022–present</span>
-            <ul>
-              <li>Web development — showcase sites for local businesses, currently delivering first paid client project</li>
-              <li>Digital tools built in Java and Node.js; visual assets in Canva (posters, loyalty cards, product labels)</li>
-              <li>Local services — garden maintenance, car cleaning, removals, childminding</li>
-              <li>Buy/resell (eBay, Vinted) — pricing, stock management, customer relations</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <p class="section-label" style="margin-top:3rem">// education &amp; certifications</p>
-
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-dot-col"><span class="tl-dot"></span></div>
-          <span class="tl-year">2026</span>
-          <div class="tl-body">
-            <span class="tl-title">AI Fluency: Framework &amp; Foundations</span>
-            <span class="tl-role">Anthropic</span>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot-col"><span class="tl-dot"></span></div>
-          <span class="tl-year">2026</span>
-          <div class="tl-body">
-            <span class="tl-title">Claude 101</span>
-            <span class="tl-role">Anthropic</span>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot-col"><span class="tl-dot"></span></div>
-          <span class="tl-year">2024–25</span>
-          <div class="tl-body">
-            <span class="tl-title">BSc Computer Science</span>
-            <span class="tl-role">UT3 Paul Sabatier, Toulouse — dropped out</span>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot-col"><span class="tl-dot"></span></div>
-          <span class="tl-year">2024</span>
-          <div class="tl-body">
-            <span class="tl-title">Baccalauréat Général</span>
-            <span class="tl-role">Lycée Polyvalent Maréchal Lannes</span>
-            <ul><li>Specialties: Physics-Chemistry · Economics &amp; Social Sciences</li></ul>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot-col"><span class="tl-dot"></span></div>
-          <span class="tl-year">2023</span>
-          <div class="tl-body">
-            <span class="tl-title">BAFA — Theoretical Stage</span>
-            <span class="tl-role">Ligue de l'enseignement, Auch</span>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot-col"><span class="tl-dot"></span></div>
-          <span class="tl-year">2021</span>
-          <div class="tl-body">
-            <span class="tl-title">First Aid Certification PSC1</span>
-            <span class="tl-role">Ligue de l'enseignement, Auch</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <p class="section-label">// projects</p>
-
-      <div id="projects-grid">
-        <div class="project-entry">
-          <div class="proj-header">
-            <span class="proj-num accent">01</span>
-            <span class="proj-title">Custom Homepage</span>
-            <a class="proj-link" href="https://github.com/Jossyboiii/Custom-Homepage" target="_blank">→ github</a>
-          </div>
-          <div class="carousel" id="carousel-1">
-            <div class="carousel-images">
-              <img src="assets/homepage.png" alt="Custom Homepage" class="active">
-              <img src="assets/homepage1.png" alt="Custom Homepage 2">
-              <img src="assets/homepage2.png" alt="Custom Homepage 3">
-            </div>
-            <button class="cbtn prev" onclick="carouselPrev('carousel-1')">‹</button>
-            <button class="cbtn next" onclick="carouselNext('carousel-1')">›</button>
-          </div>
-          <p class="proj-desc">Browser start page with bookmarks, live clock, and integrated search. Built to replace the default new tab.</p>
-        </div>
-
-        <div class="project-entry">
-          <div class="proj-header">
-            <span class="proj-num accent">02</span>
-            <span class="proj-title">Portfolio Website</span>
-            <a class="proj-link" href="https://github.com/Jossyboiii/Portfolio" target="_blank">→ github</a>
-          </div>
-          <div class="carousel" id="carousel-2">
-            <div class="carousel-images">
-              <img src="assets/portfolio.png" alt="Portfolio" class="active">
-              <img src="assets/portfolio1.png" alt="Portfolio 2">
-            </div>
-            <button class="cbtn prev" onclick="carouselPrev('carousel-2')">‹</button>
-            <button class="cbtn next" onclick="carouselNext('carousel-2')">›</button>
-          </div>
-          <p class="proj-desc">Personal portfolio and social hub — doubles as a Linktree replacement and a professional landing page for CV/LinkedIn.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <p class="section-label">// contact</p>
-
-      <p class="contact-intro">Open to collaborations, opportunities, and interesting conversations.</p>
-
-      <p class="section-label">// find me</p>
-
-      <div class="contact-links">
-        <a class="contact-card" href="mailto:jco.debarros@gmail.com">
-          <svg class="sc-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          <span class="cc-label">Email</span>
-          <span class="cc-handle">jco.debarros@gmail.com</span>
-        </a>
-        <a class="contact-card" href="https://github.com/Jossyboiii/" target="_blank">
-          <svg class="sc-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-          <span class="cc-label">GitHub</span>
-          <span class="cc-handle">Jossyboiii</span>
-        </a>
-        <a class="contact-card" href="https://www.linkedin.com/in/jcodb" target="_blank">
-          <svg class="sc-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          <span class="cc-label">LinkedIn</span>
-          <span class="cc-handle">jcodb</span>
-        </a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <span>© 2026 José de Barros</span>
-    <span class="accent">// jossyboiii.me</span>
-  </footer>
-
-  <script src="script.js"></script>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-dot-col"><span class="tl-dot"></span></div>
+<span class="tl-year">2023</span>
+<div class="tl-body">
+<span class="tl-title">BAFA — Theoretical Stage</span>
+<span class="tl-role">Ligue de l'enseignement, Auch</span>
+</div>
+</div>
+<div class="tl-item">
+<div class="tl-dot-col"><span class="tl-dot"></span></div>
+<span class="tl-year">2021</span>
+<div class="tl-body">
+<span class="tl-title">First Aid Certification PSC1</span>
+<span class="tl-role">Ligue de l'enseignement, Auch</span>
+</div>
+</div>
+</div>
+</section>
+<!-- PROJECTS -->
+<section class="section" id="projects">
+<p class="section-label">// projects</p>
+<div id="projects-grid">
+<div class="project-entry">
+<div class="proj-header">
+<span class="proj-num accent">01</span>
+<span class="proj-title">Custom Homepage</span>
+<a class="proj-link" href="https://github.com/Jossyboiii/Custom-Homepage" target="_blank">→ github</a>
+</div>
+<div class="carousel" id="carousel-1">
+<div class="carousel-images">
+<img alt="Custom Homepage" class="active" src="assets/homepage.png"/>
+<img alt="Custom Homepage 2" src="assets/homepage1.png"/>
+<img alt="Custom Homepage 3" src="assets/homepage2.png"/>
+</div>
+<button class="cbtn prev" onclick="carouselPrev('carousel-1')">‹</button>
+<button class="cbtn next" onclick="carouselNext('carousel-1')">›</button>
+</div>
+<p class="proj-desc">Browser start page with bookmarks, live clock, and integrated search. Built to replace the default new tab.</p>
+</div>
+<div class="project-entry">
+<div class="proj-header">
+<span class="proj-num accent">02</span>
+<span class="proj-title">Portfolio Website</span>
+<a class="proj-link" href="https://github.com/Jossyboiii/Portfolio" target="_blank">→ github</a>
+</div>
+<div class="carousel" id="carousel-2">
+<div class="carousel-images">
+<img alt="Portfolio" class="active" src="assets/portfolio.png"/>
+<img alt="Portfolio 2" src="assets/portfolio1.png"/>
+</div>
+<button class="cbtn prev" onclick="carouselPrev('carousel-2')">‹</button>
+<button class="cbtn next" onclick="carouselNext('carousel-2')">›</button>
+</div>
+<p class="proj-desc">Personal portfolio and social hub — doubles as a Linktree replacement and a professional landing page for CV/LinkedIn.</p>
+</div>
+</div>
+</section>
+<!-- CONTACT -->
+<section class="section" id="contact">
+<p class="section-label">// contact</p>
+<p class="contact-intro">Open to collaborations, opportunities, and interesting conversations.</p>
+<p class="section-label">// find me</p>
+<div class="contact-links">
+<a class="contact-card" href="mailto:jco.debarros@gmail.com">
+<svg class="sc-svg" fill="currentColor" viewbox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+<span class="cc-label">Email</span>
+<span class="cc-handle">jco.debarros@gmail.com</span>
+</a>
+<a class="contact-card" href="https://github.com/Jossyboiii/" target="_blank">
+<svg class="sc-svg" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"></path></svg>
+<span class="cc-label">GitHub</span>
+<span class="cc-handle">Jossyboiii</span>
+</a>
+<a class="contact-card" href="https://www.linkedin.com/in/jcodb" target="_blank">
+<svg class="sc-svg" fill="currentColor" viewbox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+<span class="cc-label">LinkedIn</span>
+<span class="cc-handle">jcodb</span>
+</a>
+</div>
+</section>
+</main>
+<footer>
+<span>© 2026 José de Barros</span>
+<span class="accent">// jossyboiii.me</span>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
