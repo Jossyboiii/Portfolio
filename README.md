@@ -1,4 +1,4 @@
-# jossyboiii.me — Personal Portfolio
+Personal Portfolio
  
 ![Preview](preview.png)
  
