@@ -299,24 +299,15 @@ main {
 .kv-val a:hover { color: #FFEE00; }
 
 /* ── Timeline ────────────────────────────────────────────── */
-
-/*
-  Layout: [20px dot col] [80px year col] [1fr content col]
-  The line runs down the centre of the dot column (left: 9px).
-  Dots sit on top via z-index. Year and content are fully clear
-  of the line — no overlap ever.
-*/
-
 .timeline {
   position: relative;
   padding-left: 0;
 }
 
-/* Single unbroken vertical line */
 .timeline::before {
   content: '';
   position: absolute;
-  left: 9px; /* centre of 20px dot column */
+  left: 9px;
   top: 10px;
   bottom: 10px;
   width: 1px;
@@ -333,7 +324,6 @@ main {
 
 .tl-item:last-child { padding-bottom: 0; }
 
-/* dot column — just holds the dot, centred on the line */
 .tl-dot-col {
   display: flex;
   justify-content: center;
@@ -356,7 +346,6 @@ main {
   background: #FFEE00;
 }
 
-/* year column */
 .tl-year {
   font-size: 11px;
   color: #555;
@@ -411,78 +400,286 @@ main {
   opacity: 0.5;
 }
 
-/* ── PROJECTS ────────────────────────────────────────────── */
-#projects-grid { display: flex; flex-direction: column; gap: 2.5rem; }
-
-.project-entry { border-top: 1px solid #2a2a2a; padding-top: 1.5rem; }
-
-.proj-header {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  margin-bottom: 1rem;
-}
-
-.proj-num { font-size: 12px; letter-spacing: 0.1em; }
-
-.proj-title {
-  font-size: 15px;
-  font-weight: bold;
-  flex: 1;
-}
-
-.proj-link {
-  font-size: 12px;
-  color: #555;
-  letter-spacing: 0.04em;
-  transition: color 0.2s;
-}
-
-.proj-link:hover { color: #FFEE00; }
-
-.carousel {
-  position: relative;
-  background: #0d0d0d;
+/* ── PROJECTS — Featured ─────────────────────────────────── */
+.featured-project {
   border: 1px solid #2a2a2a;
+  margin-bottom: 2.5rem;
+  background: rgba(0,0,0,0.3);
+}
+
+.featured-label {
+  font-size: 11px;
+  color: #FFEE00;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+  padding: 8px 14px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.featured-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-img-wrap {
+  position: relative;
   aspect-ratio: 16/9;
   overflow: hidden;
-  margin-bottom: 1rem;
-  max-width: 600px;
+  background: #0d0d0d;
+  border-bottom: 1px solid #2a2a2a;
 }
 
-.carousel-images { width: 100%; height: 100%; }
+/* card image wrap */
+.card-img-wrap {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: #0d0d0d;
+  overflow: hidden;
+  border-bottom: 1px solid #2a2a2a;
+}
 
-.carousel-images img {
-  display: none;
+.featured-img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-.carousel-images img.active { display: block; }
-
-.cbtn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(10, 10, 10, 0.75);
-  border: 1px solid #333;
-  color: #c5c8c6;
-  cursor: pointer;
-  font: 18px/1 "Inconsolata", monospace;
-  width: 28px;
-  height: 28px;
+.featured-placeholder {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.2s, color 0.2s;
+  background: #0d0d0d;
 }
 
-.cbtn:hover { border-color: #FFEE00; color: #FFEE00; }
-.cbtn.prev { left: 8px; }
-.cbtn.next { right: 8px; }
+.placeholder-text {
+  font-size: 11px;
+  color: #333;
+  letter-spacing: 0.06em;
+}
 
-.proj-desc { color: #666; font-size: 13px; max-width: 600px; line-height: 1.7; }
+.featured-info {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.featured-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.featured-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #c5c8c6;
+}
+
+.featured-desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* ── Blinking cursor ─────────────────────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.blink-cursor {
+  animation: blink 1s step-start infinite;
+}
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.badge {
+  font-size: 11px;
+  color: #FFEE00;
+  border: 1px solid #2a2a2a;
+  padding: 2px 8px;
+  letter-spacing: 0.06em;
+  opacity: 0.8;
+}
+
+/* ── Featured key features ───────────────────────────────── */
+.featured-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.features-label {
+  font-size: 11px;
+  color: #FFEE00;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.features-list li {
+  font-size: 12px;
+  color: #666;
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.features-list li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: #FFEE00;
+  opacity: 0.5;
+}
+
+/* ── Featured buttons ────────────────────────────────────── */
+.featured-btns {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.featured-btn-disabled {
+  border-color: #222;
+  color: #333;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Filter bar ──────────────────────────────────────────── */
+.proj-filters {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  border: 1px solid #2a2a2a;
+  width: fit-content;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  border-right: 1px solid #2a2a2a;
+  color: #555;
+  cursor: pointer;
+  font: 12px/1 "Inconsolata", monospace;
+  padding: 8px 16px;
+  letter-spacing: 0.06em;
+  transition: color 0.2s, background 0.2s;
+}
+
+.filter-btn:last-child { border-right: none; }
+.filter-btn:hover { color: #c5c8c6; }
+.filter-btn.active { color: #FFEE00; background: rgba(255,238,0,0.05); }
+
+/* ── Project grid ────────────────────────────────────────── */
+#proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.proj-card {
+  border: 1px solid #2a2a2a;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.proj-card:hover {
+  transform: translateY(-3px);
+  border-color: #444;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+/* ── Image cycling ───────────────────────────────────────── */
+.feat-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.feat-img.active { opacity: 1; }
+
+.card-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card-img.active { opacity: 1; }
+
+/* reuse existing .cbtn styles — they work inside cards too */
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #c5c8c6;
+}
+
+.card-desc {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.card-btns {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+.card-btns .term-btn {
+  font-size: 11px;
+  padding: 6px 12px;
+}
+
+/* hidden state for filter */
+.proj-card.hidden {
+  display: none;
+}
 
 /* ── CONTACT ─────────────────────────────────────────────── */
 .contact-intro {
@@ -561,4 +758,18 @@ footer {
   .kv-row { grid-template-columns: 80px 1fr; }
   #social-grid { grid-template-columns: 1fr 1fr; }
   footer { flex-direction: column; gap: 4px; }
+
+  /* grid goes single column on mobile */
+  #proj-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proj-filters {
+    width: 100%;
+  }
+
+  .filter-btn {
+    flex: 1;
+    text-align: center;
+  }
 }

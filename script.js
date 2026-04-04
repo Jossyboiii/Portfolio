@@ -39,32 +39,46 @@ function closeMobileMenu() {
   mobileMenu.classList.remove('open');
 }
 
-// ── Carousel (old — for projects section if re-used) ───────
-function carouselStep(carouselId, dir) {
-  const imgs = Array.from(
-    document.querySelectorAll(`#${carouselId} .carousel-images img`)
-  );
-  if (!imgs.length) return;
-  const cur = imgs.findIndex(i => i.classList.contains('active'));
-  imgs[cur].classList.remove('active');
-  imgs[(cur + dir + imgs.length) % imgs.length].classList.add('active');
-}
+// ── Featured project — always cycling ─────────────────────
+(function () {
+  const wrap = document.getElementById('featured-carousel');
+  if (!wrap) return;
+  const imgs = Array.from(wrap.querySelectorAll('.feat-img'));
+  if (imgs.length <= 1) return;
+  let cur = 0;
+  setInterval(() => {
+    imgs[cur].classList.remove('active');
+    cur = (cur + 1) % imgs.length;
+    imgs[cur].classList.add('active');
+  }, 2500);
+})();
 
-function carouselNext(id) { carouselStep(id,  1); }
-function carouselPrev(id) { carouselStep(id, -1); }
-
-// ── Card carousel (project grid cards) ────────────────────
-function cardCarouselStep(btn, dir) {
-  const wrap = btn.closest('.card-img-wrap');
+// ── Card images — cycle on hover, pause on mouse leave ─────
+document.querySelectorAll('.card-img-wrap[data-hover-cycle]').forEach(wrap => {
   const imgs = Array.from(wrap.querySelectorAll('.card-img'));
   if (imgs.length <= 1) return;
-  const cur = imgs.findIndex(i => i.classList.contains('active'));
-  imgs[cur].classList.remove('active');
-  imgs[(cur + dir + imgs.length) % imgs.length].classList.add('active');
-}
+  let cur = 0;
+  let timer = null;
 
-function cardCarouselNext(btn) { cardCarouselStep(btn,  1); }
-function cardCarouselPrev(btn) { cardCarouselStep(btn, -1); }
+  function step() {
+    imgs[cur].classList.remove('active');
+    cur = (cur + 1) % imgs.length;
+    imgs[cur].classList.add('active');
+  }
+
+  wrap.addEventListener('mouseenter', () => {
+    timer = setInterval(step, 800);
+  });
+
+  wrap.addEventListener('mouseleave', () => {
+    clearInterval(timer);
+    timer = null;
+    // reset to first image
+    imgs[cur].classList.remove('active');
+    cur = 0;
+    imgs[cur].classList.add('active');
+  });
+});
 
 // ── Project filters ────────────────────────────────────────
 document.querySelectorAll('.filter-btn').forEach(btn => {

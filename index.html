@@ -53,7 +53,7 @@
 <main>
 <!-- HOME -->
 <section class="section active" id="home">
-<h1 id="hero-name">Hi, I'm<br/>Jay<span class="accent">_</span></h1>
+<h1 id="hero-name">Hi,<br/>I'm Jay<span class="accent blink-cursor">_</span></h1>
 <p class="hero-sub">// born in England. raised in France. figuring stuff out.</p>
 <div id="social-grid">
 <a class="social-card" href="https://www.youtube.com/@jossyboiii" target="_blank">
@@ -92,7 +92,6 @@
 <div class="tl-body">
 <span class="tl-title">Les Délices de Lectoure</span>
 <span class="tl-role">Acting Assistant Manager · Feb–Dec 2025</span>
-
 </div>
 </div>
 <div class="tl-item">
@@ -101,7 +100,6 @@
 <div class="tl-body">
 <span class="tl-title">Le Bastion</span>
 <span class="tl-role">Server / Bartender · Mar–Jun 2024</span>
-
 </div>
 </div>
 <div class="tl-item">
@@ -110,7 +108,6 @@
 <div class="tl-body">
 <span class="tl-title">La Maison Escat</span>
 <span class="tl-role">General Worker · Assistant Caterer · 2021–2023</span>
-
 </div>
 </div>
 <div class="tl-item">
@@ -119,7 +116,6 @@
 <div class="tl-body">
 <span class="tl-title">Flora Mazeres Fleurs</span>
 <span class="tl-role">Agricultural Worker · 2022–2023</span>
-
 </div>
 </div>
 <div class="tl-item">
@@ -128,7 +124,6 @@
 <div class="tl-body">
 <span class="tl-title">Entrepreneurial &amp; Digital Work</span>
 <span class="tl-role">Independent · 2022–present</span>
-
 </div>
 </div>
 </div>
@@ -164,7 +159,6 @@
 <div class="tl-body">
 <span class="tl-title">Baccalauréat Général</span>
 <span class="tl-role">Lycée Polyvalent Maréchal Lannes</span>
-
 </div>
 </div>
 <div class="tl-item">
@@ -187,42 +181,128 @@
 </section>
 <!-- PROJECTS -->
 <section class="section" id="projects">
-<p class="section-label">// projects</p>
-<div id="projects-grid">
-<div class="project-entry">
-<div class="proj-header">
-<span class="proj-num accent">01</span>
-<span class="proj-title">Custom Homepage</span>
-<a class="proj-link" href="https://github.com/Jossyboiii/Custom-Homepage" target="_blank">→ github</a>
-</div>
-<div class="carousel" id="carousel-1">
-<div class="carousel-images">
-<img alt="Custom Homepage" class="active" src="assets/homepage.png"/>
-<img alt="Custom Homepage 2" src="assets/homepage1.png"/>
-<img alt="Custom Homepage 3" src="assets/homepage2.png"/>
-</div>
-<button class="cbtn prev" onclick="carouselPrev('carousel-1')">‹</button>
-<button class="cbtn next" onclick="carouselNext('carousel-1')">›</button>
-</div>
-<p class="proj-desc">Browser start page with bookmarks, live clock, and integrated search. Built to replace the default new tab.</p>
-</div>
-<div class="project-entry">
-<div class="proj-header">
-<span class="proj-num accent">02</span>
-<span class="proj-title">Portfolio Website</span>
-<a class="proj-link" href="https://github.com/Jossyboiii/Portfolio" target="_blank">→ github</a>
-</div>
-<div class="carousel" id="carousel-2">
-<div class="carousel-images">
-<img alt="Portfolio" class="active" src="assets/portfolio.png"/>
-<img alt="Portfolio 2" src="assets/portfolio1.png"/>
-</div>
-<button class="cbtn prev" onclick="carouselPrev('carousel-2')">‹</button>
-<button class="cbtn next" onclick="carouselNext('carousel-2')">›</button>
-</div>
-<p class="proj-desc">Personal portfolio and social hub — doubles as a Linktree replacement and a professional landing page for CV/LinkedIn.</p>
-</div>
-</div>
+  <p class="section-label">// projects</p>
+
+  <!-- ── Featured Project ───────────────────────────────── -->
+  <div class="featured-project">
+    <div class="featured-label">// featured</div>
+    <div class="featured-inner">
+      <div class="featured-img-wrap" id="featured-carousel">
+        <img class="feat-img active" src="assets/bakery1.png" alt="Bakery Website 1"/>
+        <img class="feat-img" src="assets/bakery2.png" alt="Bakery Website 2"/>
+        <img class="feat-img" src="assets/bakery3.png" alt="Bakery Website 3"/>
+        <img class="feat-img" src="assets/bakery4.png" alt="Bakery Website 4"/>
+        <img class="feat-img" src="assets/bakery5.png" alt="Bakery Website 5"/>
+      </div>
+      <div class="featured-info">
+        <div class="featured-header">
+          <span class="featured-title">Bakery Website</span>
+        </div>
+        <p class="featured-desc">A full client website built for a local French bakery — clean product showcase with a responsive layout designed for mobile-first browsing.</p>
+        <div class="badge-row">
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">JavaScript</span>
+        </div>
+        <div class="featured-features">
+          <span class="features-label">// key features</span>
+          <ul class="features-list">
+            <li>Responsive mobile-first layout</li>
+            <li>Product showcase with category sections</li>
+            <li>Custom typography and brand styling</li>
+            <li>Contact &amp; location section</li>
+          </ul>
+        </div>
+        <div class="featured-btns">
+          <a class="term-btn accent-btn" href="https://github.com/Jossyboiii/Les-Delices-de-Lectoure" target="_blank">→ github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Filter bar ─────────────────────────────────────── -->
+  <div class="proj-filters">
+    <button class="filter-btn active" data-filter="all">all</button>
+    <button class="filter-btn" data-filter="webdev">web development</button>
+    <button class="filter-btn" data-filter="other">other</button>
+  </div>
+
+  <!-- ── Project grid ───────────────────────────────────── -->
+  <div id="proj-grid">
+
+    <div class="proj-card" data-category="webdev">
+      <div class="card-img-wrap" data-hover-cycle>
+        <img class="card-img active" src="assets/homepage1.png" alt="Custom Homepage 1"/>
+        <img class="card-img" src="assets/homepage2.png" alt="Custom Homepage 2"/>
+        <img class="card-img" src="assets/homepage3.png" alt="Custom Homepage 3"/>
+        <img class="card-img" src="assets/homepage4.png" alt="Custom Homepage 4"/>
+        <img class="card-img" src="assets/homepage5.png" alt="Custom Homepage 5"/>
+      </div>
+      <div class="card-body">
+        <div class="card-header">
+          <span class="proj-num accent">01</span>
+          <span class="card-title">Custom Homepage</span>
+        </div>
+        <p class="card-desc">Browser start page with bookmarks, live clock, and integrated search — built to replace the default new tab.</p>
+        <div class="badge-row">
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">JavaScript</span>
+        </div>
+        <div class="card-btns">
+          <a class="term-btn accent-btn" href="https://github.com/Jossyboiii/Custom-Homepage" target="_blank">→ github</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card" data-category="webdev">
+      <div class="card-img-wrap" data-hover-cycle>
+        <img class="card-img active" src="assets/portfolio.png" alt="Portfolio Website 1"/>
+        <img class="card-img" src="assets/portfolio1.png" alt="Portfolio Website 2"/>
+      </div>
+      <div class="card-body">
+        <div class="card-header">
+          <span class="proj-num accent">02</span>
+          <span class="card-title">Portfolio Website</span>
+        </div>
+        <p class="card-desc">Personal portfolio and social hub — doubles as a Linktree replacement and a professional landing page for CV/LinkedIn.</p>
+        <div class="badge-row">
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">JavaScript</span>
+        </div>
+        <div class="card-btns">
+          <a class="term-btn accent-btn" href="https://github.com/Jossyboiii/Portfolio" target="_blank">→ github</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card" data-category="webdev">
+      <div class="card-img-wrap" data-hover-cycle>
+        <img class="card-img active" src="assets/bakery1.png" alt="Bakery Website 1"/>
+        <img class="card-img" src="assets/bakery2.png" alt="Bakery Website 2"/>
+        <img class="card-img" src="assets/bakery3.png" alt="Bakery Website 3"/>
+        <img class="card-img" src="assets/bakery4.png" alt="Bakery Website 4"/>
+        <img class="card-img" src="assets/bakery5.png" alt="Bakery Website 5"/>
+      </div>
+      <div class="card-body">
+        <div class="card-header">
+          <span class="proj-num accent">03</span>
+          <span class="card-title">Bakery Website</span>
+        </div>
+        <p class="card-desc">Client website for a local French bakery — responsive product showcase with mobile-first design.</p>
+        <div class="badge-row">
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">JavaScript</span>
+        </div>
+        <div class="card-btns">
+          <a class="term-btn accent-btn" href="https://github.com/Jossyboiii/Les-Delices-de-Lectoure" target="_blank">→ github</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 <!-- CONTACT -->
 <section class="section" id="contact">
