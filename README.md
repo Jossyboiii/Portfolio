@@ -1,10 +1,10 @@
-# jossyboiii.me — Personal Portfolio
+# Personal Portfolio
+
+Personal portfolio and social hub. Doubles as a Linktree replacement and a professional landing page.
  
 ![Preview](preview.png)
  
-Personal portfolio and social hub. Doubles as a Linktree replacement and a professional landing page.
- 
-Built with vanilla HTML, CSS, and JavaScript — no frameworks, no dependencies.
+ Built with vanilla HTML, CSS, and JavaScript — no frameworks, no dependencies.
  
 ---
  
