@@ -39,7 +39,7 @@ function closeMobileMenu() {
   mobileMenu.classList.remove('open');
 }
 
-// ── Carousel ───────────────────────────────────────────────
+// ── Carousel (old — for projects section if re-used) ───────
 function carouselStep(carouselId, dir) {
   const imgs = Array.from(
     document.querySelectorAll(`#${carouselId} .carousel-images img`)
@@ -52,6 +52,38 @@ function carouselStep(carouselId, dir) {
 
 function carouselNext(id) { carouselStep(id,  1); }
 function carouselPrev(id) { carouselStep(id, -1); }
+
+// ── Card carousel (project grid cards) ────────────────────
+function cardCarouselStep(btn, dir) {
+  const wrap = btn.closest('.card-img-wrap');
+  const imgs = Array.from(wrap.querySelectorAll('.card-img'));
+  if (imgs.length <= 1) return;
+  const cur = imgs.findIndex(i => i.classList.contains('active'));
+  imgs[cur].classList.remove('active');
+  imgs[(cur + dir + imgs.length) % imgs.length].classList.add('active');
+}
+
+function cardCarouselNext(btn) { cardCarouselStep(btn,  1); }
+function cardCarouselPrev(btn) { cardCarouselStep(btn, -1); }
+
+// ── Project filters ────────────────────────────────────────
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    // update active state
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.proj-card').forEach(card => {
+      if (filter === 'all') {
+        card.classList.remove('hidden');
+      } else {
+        const match = card.dataset.category === filter;
+        card.classList.toggle('hidden', !match);
+      }
+    });
+  });
+});
 
 // ── Keyboard navigation ────────────────────────────────────
 const TAB_ORDER = ['home', 'about', 'projects', 'contact'];
